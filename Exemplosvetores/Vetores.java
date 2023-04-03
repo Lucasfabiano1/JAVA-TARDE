@@ -14,7 +14,7 @@ public class Vetores {
     }
     public void Exemplo2() {
         //criando o vetor
-        int[] novoValores = new int[5];
+        int novoValores[] = new int[5];
         novoValores[0] = 10;
         novoValores[1] = 20;
         novoValores[2] = 35;

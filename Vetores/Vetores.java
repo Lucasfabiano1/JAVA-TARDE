@@ -25,27 +25,12 @@ public class Vetores {
 
     public void Exemplo2() {
         double vetoresDouble[] = new double[10];
-        System.out.println("Preencha o vetor de 10 posições");
-        vetoresDouble[0] = sc.nextInt();
-        vetoresDouble[1] = sc.nextInt();
-        vetoresDouble[2] = sc.nextInt();
-        vetoresDouble[3] = sc.nextInt();
-        vetoresDouble[4] = sc.nextInt();
-        vetoresDouble[5] = sc.nextInt();
-        vetoresDouble[6] = sc.nextInt();
-        vetoresDouble[7] = sc.nextInt();
-        vetoresDouble[8] = sc.nextInt();
-        vetoresDouble[9] = sc.nextInt();
-        System.out.println("O valor da 1º posição indice 9 é " + vetoresDouble[9]);
-        System.out.println("O valor da 2º posição indice 8 é " + vetoresDouble[8]);
-        System.out.println("O valor da 3º posição indice 7 é " + vetoresDouble[7]);
-        System.out.println("O valor da 4º posição indice 6 é " + vetoresDouble[6]);
-        System.out.println("O valor da 5º posição indice 5 é " + vetoresDouble[5]);
-        System.out.println("O valor da 6º posição indice 4 é " + vetoresDouble[4]);
-        System.out.println("O valor da 7º posição indice 3 é " + vetoresDouble[3]);
-        System.out.println("O valor da 8º posição indice 2 é " + vetoresDouble[2]);
-        System.out.println("O valor da 9º posição indice 1 é " + vetoresDouble[1]);
-        System.out.println("O valor da 10º posição indice 0 é " + vetoresDouble[0]);
+       for (int i = 0; i < vetoresDouble.length; i++) {
+        system.out.println("");
+        vetoresDouble[i];
+       }
+
+
     }
 
     // 1. Criar um vetor A com 5 elementos inteiros. Construir um vetor B de mesmo

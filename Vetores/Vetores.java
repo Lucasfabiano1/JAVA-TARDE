@@ -80,34 +80,81 @@ public class Vetores {
 
     // 20 nº determonar pares impares e pares em outros vetores
     public void Exercício5() {
-        int vetorNumericos[] = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-        int contPar = 0;
-        int contImpar = 0;
-        for (int i = 0; i < vetorNumericos.length; i++) {
-            if (vetorNumericos[i] % 2 == 0) {
+        int vetorNumeros[] = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+        int contPar = 0;// contador de nº Pares
+        int contImpar = 0;// contador de nº Impares
+        // percorrer o meu vetor e contar os nº pares e Impares
+        for (int i = 0; i < vetorNumeros.length; i++) {
+            if (vetorNumeros[i] % 2 == 0) {
                 contPar++;
             } else {
                 contImpar++;
             }
         }
-        int npar[] = new int[contPar];
-        int nimpar[] = new int[contImpar];
-        contImpar = 0;
+        int nPar[] = new int[contPar];
+        int nImpar[] = new int[contImpar];
+        // distribuir os nº nos vetores Par e Impar
         contPar = 0;
-        for (int i = 0; i < nimpar.length; i++) {
-            if (vetorNumericos[i] % 2 == 0) {
-                npar[contPar] = vetorNumericos[i];
-                contPar++;
-            } else {
-                nimpar[contImpar] = vetorNumericos[i];
-                contImpar++;
-            }
-            for (int i = 0; i < nimpar.length; i++) {
-                
-            }
-            for (int i = 0; i < nimpar.length; i++) {
-                System.out.println("vetorImpar["+ i + "]="+ nimpar[i]);
+        contImpar = 0;
+        for (int i = 0; i < vetorNumeros.length; i++) {
+            if (vetorNumeros[i] % 2 == 0) { // se nº for Par
+                nPar[contPar] = vetorNumeros[i];
+                contPar++;// acréscimo do contador
+            } else { // se nº for Impar
+                nImpar[contImpar] = vetorNumeros[i];
+                contImpar++;// acréscimo do contador
             }
         }
+        // Imprimindo os vetores
+        for (int i = 0; i < vetorNumeros.length; i++) {
+            System.out.println("vetor[" + i + "]=" + vetorNumeros[i]);
+        }
+        for (int i = 0; i < nPar.length; i++) {
+            System.out.println("vetorPar[" + i + "]=" + nPar[i]);
+        }
+        for (int i = 0; i < nImpar.length; i++) {
+            System.out.println("vetorImpar[" + i + "]=" + nImpar[i]);
+        }
+    }
+    public void Exercício5ganb() {
+        int numeros[] = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+        int nPar[] = new int[numeros.length] ;
+        int nImpar[] = new int[numeros.length];
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 == 0) {
+                nPar[i] = numeros[i];
+            } else {
+                nImpar[i] = numeros[i];
+            }
+        }
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println("vetor[" + i + "]=" + numeros[i]);
+        }
+        for (int i = 0; i < nPar.length; i++) {
+            System.out.println("vetorPar[" + i + "]=" + nPar[i]);
+        }
+        for (int i = 0; i < nImpar.length; i++) {
+            System.out.println("vetorImpar[" + i + "]=" + nImpar[i]);
+        }
+    }
+    public void exercicio6() {
+        double mediasAlunos[]= new double[3];
+        double notasAlunos[]= new double[4];
+        int cont = 0;
+        for (int i = 0; i < mediasAlunos.length; i++) {
+            for (int j = 0; j < notasAlunos.length; j++) {
+                System.out.println("Informe a Nota "+(j+1)+" do Aluno "+(i+1)+":");
+                notasAlunos[j]=sc.nextDouble();
+                mediasAlunos[i]+=notasAlunos[j];
+            }
+            mediasAlunos[i]/=notasAlunos.length;
+            if (mediasAlunos[i]>=7){
+                cont++;
+            }
+        }
+        for (int i = 0; i < mediasAlunos.length; i++) {
+            System.out.println(" a média do Aluno "+(i+1)+" é :"+mediasAlunos[i]);
+        }
+        System.out.println("O nº de alunos com Nota >=7 é "+ cont);
     }
 }

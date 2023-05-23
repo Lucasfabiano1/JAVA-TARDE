@@ -42,9 +42,7 @@ public class Exercicios {
                 }
             }
         }
-
         System.out.println("---------------");
-
         for (int i = 0; i < linha; i++) {
             System.out.print("| ");
             for (int j = 0; j < coluna; j++) {
@@ -65,7 +63,7 @@ public class Exercicios {
         boolean tenteNovamente = true;
         int cont = 1;
         while (tenteNovamente) {
-            System.out.println("Dê um palpite de 0 à 1000");
+            System.out.println("Dê um palpite de 0 à 999 ");
             int nPalpite = sc.nextInt();
             if (nAleatorio == nPalpite) {
                 System.out.println("PARABÉNS VOCÊ ACERTOU E GANHARÁ UM BELO NADAAAA");
@@ -85,7 +83,6 @@ public class Exercicios {
     }
 
     public void atvd3() {
-
         // Escreva um programa que:
         // Sorteie o tamanho de uma vetor de minimo 100 e máximo 1000
         // Construa o vetor
@@ -96,20 +93,7 @@ public class Exercicios {
         // Exiba a quantidade de números ímpares existem nas posições pares do vetor
 
         int lRandow = rd.nextInt(901)+100;
-        
         int[] classe = new int[] {lRandow};
         System.out.println( "1° Posição- Índice [0]:"+ classe[0] );
-        
-       
-            
-
-
-
-
-
-
-
-
-
     }
 }

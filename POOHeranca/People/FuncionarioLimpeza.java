@@ -1,4 +1,4 @@
-package POOHeranca;
+package POOHeranca.People;
 
 public class FuncionarioLimpeza extends Pessoas {
     private String comodos;

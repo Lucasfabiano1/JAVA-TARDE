@@ -1,4 +1,4 @@
-package POOHeranca;
+package POOHeranca.People;
 
 public class Alunos extends Pessoas {
     //Sub classe de pessoas

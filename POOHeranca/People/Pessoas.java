@@ -1,6 +1,6 @@
-package POOHeranca;
+package POOHeranca.People;
 
-public class Pessoas {
+public abstract class Pessoas {
     //superclasse (Fornecer herança para as outras classes)
     //atributos gnéricos (comuns a todas as demais clasess)
     //Atributos

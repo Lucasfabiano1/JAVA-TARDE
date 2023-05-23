@@ -1,5 +1,9 @@
 package POOHeranca;
 
+import POOHeranca.People.Alunos;
+import POOHeranca.People.FuncionarioLimpeza;
+import POOHeranca.People.Professores;
+
 public class App {
     public static void main(String[] args) {
         Alunos aluno01 = new Alunos(); //obj

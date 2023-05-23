@@ -7,7 +7,7 @@ public class Exercicios {
     Scanner sc = new Scanner(System.in);
     Random rd = new Random(10);
 
-    public void atvd1() {
+    public void Exercicio1() {
         // Crie uma Classe que crie uma Matriz de Linha determinada pelo Usuário e
         // Coluna determinadas pelo Usuário
         // Preencha a Matriz com valores aleatórios entre 0 e 9 e imprimia a matriz
@@ -52,7 +52,7 @@ public class Exercicios {
         }
     }
 
-    public void atvd2() {
+    public void Exercicio2() {
         // Crie uma classe que:
         // Sorteie um número de 0 a 1000;
         // Peça um palpite ao usuário. Se ele errar, informe se o palpite é maior ou
@@ -82,18 +82,47 @@ public class Exercicios {
         }
     }
 
-    public void atvd3() {
-        // Escreva um programa que:
-        // Sorteie o tamanho de uma vetor de minimo 100 e máximo 1000
-        // Construa o vetor
-        // Liste o vetor com números aleatórios de 1 a 100
-        // Exiba apenas os números pares do vetor
-        // Exiba apenas os números ímpares do vetor
-        // Exiba a quantidade de números pares existem nas posições ímpares do vetor
-        // Exiba a quantidade de números ímpares existem nas posições pares do vetor
-
-        int lRandow = rd.nextInt(901)+100;
-        int[] classe = new int[] {lRandow};
-        System.out.println( "1° Posição- Índice [0]:"+ classe[0] );
+    public void Exercicio3() {
+        //criar um vetor 100 - 1000
+        int vetor[] = new int[rd.nextInt(900)+100];
+        //preencher o vetor
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = rd.nextInt(100)+1;
+        }
+        //procurar os impares e imprimir
+        int contImparNoPar=0;
+        int contParNoImpar=0;
+        for (int i = 0; i < vetor.length; i++) {
+            if(vetor[i]%2 ==1){
+                System.out.println(vetor[i]);
+                if(i%2 ==1){
+                    contImparNoPar++;
+                }
+            }
+        }
+        //procurar os pares e imprimir
+        for (int i = 0; i < vetor.length; i++) {
+            if(vetor[i]%2 ==0){
+                System.out.println(vetor[i]);
+                if(i%2 ==0){
+                    contParNoImpar++;
+                }
+            }
+        }
+        //contar os Impares na posição Par
+        contImparNoPar = 0;
+        contParNoImpar = 0;
+        for (int i = 1; i < vetor.length; i+=2) {
+            if(vetor[i]%2==1){
+                contImparNoPar++;
+            }
+        }
+        //contar os Pares na posição Impar
+        for (int i = 0; i < vetor.length; i+=2) {
+            if(vetor[i]%2==0){
+                contParNoImpar++;
+            }
+        }
     }
-}
+    }
+

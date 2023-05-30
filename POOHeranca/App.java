@@ -10,7 +10,7 @@ public class App {
         aluno01.setCpf(null);
         aluno01.setEndereço(null);
         aluno01.setIdade(0);
-        aluno01.setNome(null);
+        aluno01.setNome("jão");
         Professores prof01 = new Professores(); //obj
         prof01.setCpf(null);
         prof01.setEndereço(null);

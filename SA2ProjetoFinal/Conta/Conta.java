@@ -1,11 +1,15 @@
 package SA2ProjetoFinal.Conta;
 
+import javax.swing.JOptionPane;
+
 public abstract class Conta {
 
     //aributos básicos
     String nome;
     int nConta;
     double saldo;
+    double saque;
+    double deposito;
 
      //métodos
     //gets sets
@@ -28,5 +32,12 @@ public abstract class Conta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-  
+    public void saque(){
+    double saque = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor do Saque"));
+        saldo -=saque;
+}
+    public void deposito(){
+    double deposito = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor a ser depositado"));
+    saldo +=deposito;
+}
 }

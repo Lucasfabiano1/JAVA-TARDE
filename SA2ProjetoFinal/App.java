@@ -34,6 +34,8 @@ public class App {
                     clientePf[contPf].setnCpf(JOptionPane.showInputDialog("Informe o CPF do Cliente"));
                     clientePf[contPf].setSaldo(0);
                     clientePf[contPf].setnConta(1000 + contPf + 1);
+                    //imprimir
+                     JOptionPane.showMessageDialog(null, "O número da sua conta é " +clientePf[contPf].getnConta()+ " \n Não compartilhe com ninguém");
                     // acrescimo do contador
                     contPf++;
 
@@ -47,7 +49,10 @@ public class App {
                     clientePj[contPj].setNome(JOptionPane.showInputDialog("Digite o Nome da empresa"));
                     clientePj[contPj].setnCnpj(JOptionPane.showInputDialog("Informe o CNPJ da empresa"));
                     clientePj[contPj].setSaldo(0);
-                    clientePj[contPj].setnConta(2000 + contPf + 1);
+                    clientePj[contPj].setnConta(2000 + contPj + 1);
+                    //imprimir
+                     JOptionPane.showMessageDialog(null, "O número da sua conta é " +clientePj[contPj].getnConta()+ " \n Não compartilhe com ninguém");
+                     
                     // acrescimo do contador
                     contPf++;
                 }
@@ -76,17 +81,21 @@ public class App {
                     // entrar na conta do cliente
                     boolean acessar = true;
                     while (acessar) {
+                        int i=0;
                         int acao2 = Integer.parseInt(JOptionPane.showInputDialog(
                                 "Informe a ação desejada"
                                         + "\n 1-verificar saldo"
                                         + "\n 2-Saque"
-                                        + "\n ..."));
+                                        + "\n 3-Depósito"));
                         if (acao2 == 1) {
                             JOptionPane.showMessageDialog(
                                     null, clientePf[contaAtual].getSaldo());
+                        }else if(acao2==2){
+                            clientePf[i].saque();
+                        }else if(acao2==3){
+                            clientePf[i].deposito();
                         }
                     }
-
                 } else if (opcaoConta2 == 2) { // acessar juridica
                     // buscar a conta no vetor
                     int nContaBuscada = Integer
@@ -104,14 +113,19 @@ public class App {
                     // entrar na conta do cliente
                     boolean acessar = true;
                     while (acessar) {
+                        int i=0;
                         int acao2 = Integer.parseInt(JOptionPane.showInputDialog(
                                 "Informe a ação desejada"
                                         + "\n 1-verificar saldo"
                                         + "\n 2-Saque"
-                                        + "\n ..."));
+                                        + "\n 3-Depósito"));
                         if (acao2 == 1) {
                             JOptionPane.showMessageDialog(
-                                    null, clientePf[contaAtual].getSaldo());
+                                    null, clientePj[contaAtual].getSaldo());
+                        }else if(acao2==2){
+                            clientePj[i].saque();
+                        }else if(acao2==3){
+                            clientePj[i].deposito();
                         }
                     }
                 }
